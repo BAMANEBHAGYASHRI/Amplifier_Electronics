@@ -6,8 +6,6 @@
   <link rel="icon" type="image/x-icon" href="../AmplifireElecronics/images/favicon-modified.png" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
   <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
@@ -34,15 +32,98 @@
       font-weight: bold;
       text-decoration: underline;
     }
+    .post-entry-big #myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  /* position: fixed; Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 80px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+    
   </style>
 
 
 </head>
-
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
   <div class="site-wrap">
-
     <div class="site-mobile-menu site-navbar-target">
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close mt-3">
@@ -82,7 +163,7 @@
           <div class="mr-auto">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li class="active">
+                <li>
                   <a href="index.html" class="nav-link text-left">Home</a>
                 </li>
                 <li class="has-children">
@@ -92,28 +173,27 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="" class="nav-link text-left">Feedback</a>
+                  <a href="Feedback.html" class="nav-link text-left">Feedback</a>
                 </li>
                 <li>
-                  <a href="courses.html" class="nav-link text-left">Courses</a>
+                  <a href="courses.htm" class="nav-link text-left">Courses</a>
                 </li>
                 <li>
-                  <a href="courses.html" class="nav-link text-left">Our Team</a>
+                  <a href="Team.html" class="nav-link text-left">Our Team</a>
                 </li>
                 <li>
                   <a href="contact.html" class="nav-link text-left">Contact</a>
                 </li>
               </ul>
-              </ul>
+              <!-- </ul> -->
             </nav>
 
           </div>
           <div class="ml-auto">
             <div class="social-wrap">
               <a href="#"><span class="icon-facebook"></span></a>
-              <a href="#"><span class="icon-twitter"></span></a>
-              <a href="#"><span class="icon-linkedin"></span></a>
-
+              <a href="#"><span class="icon-instagram"></span></a>
+              <a href="https://www.linkedin.com/company/amplifier-electronics/?lipi=urn%3Ali%3Apage%3Ad_flagship3_company%3BkNIyuMLvSxeSibVrsdlVSg%3D%3D"><span class="icon-linkedin"></span></a>
               <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
                   class="icon-menu h3"></span></a>
             </div>
@@ -362,25 +442,22 @@
 
           </div>
         </div>
-
-
-
       </div>
-    </div>
-
-
-
-
-    <div class="section-bg style-1" style="background-image: url('images/about_1.jpg');">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4"></div>
+          <div class="col-md-5">
             <h2 class="section-title-underline style-2">
-              <span>We've got what you need!</span>
+              <span style="color:black; margin: auto; padding-top: 50px;">We've got what you need!</span>
             </h2>
           </div>
-          <div class="col-md-6">
-            <p class="lead">An embedded system combines mechanical, electrical, and chemical components along with a
+          <div class="col-md-3"></div>
+
+        </div>
+        <div class="row">
+          
+          <div class="col-md-12" style="border:1px soild red;">
+            <p class="lead"> An embedded system combines mechanical, electrical, and chemical components along with a
               computer, hidden inside, to perform a single dedicated purpose. There are more computers on this planet
               than there are people, and most of these computers are single-chip microcontrollers that are the brains of
               an embedded system. Embedded systems are a ubiquitous component of our everyday lives. We interact with
@@ -394,6 +471,7 @@
               affordable to everyone. We believe in to amplify your ambitions</p>
             <p><a href="#">Read more</a></p>
           </div>
+          
         </div>
       </div>
     </div>
@@ -514,17 +592,17 @@
           <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
             <span class="icon flaticon-mortarboard"></span>
             <h3>Our Philosphy</h3>
-            <p></p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore eaque eos qui, assumenda illum, non voluptas alias a perspiciatis nulla ducimus excepturi unde est, deleniti nobis porro magnam. At, fugiat!</p>
           </div>
           <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
             <span class="icon flaticon-school-material"></span>
             <h3>Academics Principle</h3>
-            <p></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil alias, cupiditate, minus velit ipsa, unde voluptate corrupti reiciendis aliquam quos suscipit qui debitis neque in vitae nesciunt necessitatibus mollitia iusto?</p>
           </div>
           <div class="col-lg-4 col-md-6 mb-5 mb-lg-0">
             <span class="icon flaticon-library"></span>
             <h3>Key of Success</h3>
-            <p></p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione voluptatibus ea laboriosam vero reprehenderit, asperiores iste odio eveniet eum suscipit maxime cupiditate ullam modi quaerat, veniam, quos excepturi porro. Reprehenderit?</p>
           </div>
         </div>
       </div>
@@ -532,7 +610,6 @@
 
     <div class="news-updates">
       <div class="container">
-
         <div class="row">
           <div class="col-lg-12">
             <div class="section-heading">
@@ -540,53 +617,97 @@
               <a href="#">All About students</a>
             </div>
             <div class="row">
+              <div class="col-lg-4 col-md-6 portfolio-item first">
+                  <div class="portfolio-img rounded overflow-hidden">
+                    <img class="img-fluid" src="images/1.jpg" alt="">
+                    <div class="portfolio-btn">
+                        <a class="btn btn-lg-square btn-outline-light rounded-circle mx-1" href="images/1.jpg" data-lightbox="portfolio"></a>
+                       
+                    </div>
+                  </div>
+               </div>
               <div class="col-md-4">
                 <div class="post-entry-big">
-                  <a href="news-single.html" class="img-link"><img src="images/1.jpg" alt="Image" class="img-fluid"></a>
+                  <img id="myImg" src="images/2.jpg" alt="" style="width:100%; max-width:300px" class="img-fluid">
+                  <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                  </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="post-entry-big">
-                  <a href="news-single.html" class="img-link"><img src="images/2.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="post-entry-big">
-                  <a href="news-single.html" class="img-link"><img src="images/3.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-4">
-                <div class="post-entry-big">
-                  <a href="news-single.html" class="img-link"><img src="images/4.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="post-entry-big">
-                  <a href="news-single.html" class="img-link"><img src="images/5.jpg" alt="Image" class="img-fluid"></a>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="post-entry-big">
-                  <a href="news-single.html" class="img-link"><img src="images/6.jpg" alt="Image" class="img-fluid"></a>
+                  <img id="myImg" src="images/3.jpg" alt="" style="width:100%; max-width:300px" class="img-fluid">
+                  <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-4">
                 <div class="post-entry-big">
-                  <a href="news-single.html" class="img-link"><img src="images/7.jpg" alt="Image" class="img-fluid"></a>
+                  <img id="myImg" src="images/4.jpg" alt="" style="width:100%; max-width:300px" class="img-fluid">
+                  <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                  </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="post-entry-big">
-                  <a href="news-single.html" class="img-link"><img src="images/8.jpg" alt="Image" class="img-fluid"></a>
+                  <img id="myImg" src="images/5.jpg" alt="" style="width:100%; max-width:300px" class="img-fluid">
+                  <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                  </div>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="post-entry-big">
-                  <a href="news-single.html" class="img-link"><img src="images/9.jpg" alt="Image" class="img-fluid"></a>
+                  <img id="myImg" src="images/6.jpg" alt="" style="width:100%; max-width:300px" class="img-fluid">
+                  <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <div class="post-entry-big">
+                  <img id="myImg" src="images/7.jpg" alt="" style="width:100%; max-width:300px" class="img-fluid">
+                  <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="post-entry-big">
+                  <img id="myImg" src="images/8.jpg" alt="" style="width:100%; max-width:300px" class="img-fluid">
+                  <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="post-entry-big">
+                  <img id="myImg" src="images/9.jpg" alt="" style="width:100%; max-width:300px" class="img-fluid">
+                  <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -603,22 +724,20 @@
             <p>It's through curiosity and looking at opportunities in new ways that we've always mapped our path.</p>
           </div>
           <div class="col-lg-5">
-            <form action="" class="d-flex">
-              <input type="text" class="rounded form-control mr-2 py-3" placeholder="Enter your email">
-              <button class="btn btn-primary rounded py-3 px-4" type="submit">Send</button>
+            <form action="data.php" class="d-flex"  method="post">
+              <input type="text" class="rounded form-control mr-2 py-3" placeholder="Enter Your Email" name="email"> 
+              <input class="btn btn-primary rounded py-3 px-4" type="submit" id="submit">
             </form>
           </div>
         </div>
       </div>
     </div>
-
-
     <div class="footer">
       <div class="container">
         <div class="row">
           <div class="col-lg-4">
             <!-- <p class="mb-4"><img src="images/Amplifier.png" alt="Image" class="img-fluid"></p> -->
-            <p class="mb-4" style="color:white;font-weight: bolder; font-size:20px;"><strong>Amplifier  Electonics</strong></p>
+            <p class="mb-4" style="color:white; font-weight: bolder; font-size:20px;"><strong>Amplifier  Electonics</strong></p>
             <p>We Amplify Your Ambitions...</p>
             <p><a href="#">Learn More</a></p>
           </div>
@@ -686,11 +805,30 @@
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="js/jquery.mb.YTPlayer.min.js"></script>
-
-
-
-
   <script src="js/main.js"></script>
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    img.onclick = function(){
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+    
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+    </script>
+    
 
 </body>
 
